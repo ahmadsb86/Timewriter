@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeWriter</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" /> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+</head>
+<body class="bg-neutral-900 h-screen">
+    <div class="flex items-center justify-center bg-neutral-900 h-full w-full flex-col">
+        <h1 class="text-center text-neutral-100 text-6xl">Time <span class="text-pink-700">Writer</span></h1>
+        <h1 class="text-center text-neutral-100">A simple webapp to help you time your writing speed</h1>
+        <div class="mt-8 flex items-center justify-around w-80">
+            <a id="prac" href="/practice.html" class="text-neutral-100 text-center bg-pink-700 rounded-md w-28 py-2 hover:w-36 transition-all">Practice</a>
+            <a id="exam" href="/exam.html" class="text-neutral-100 text-center bg-neutral-700 rounded-md w-28 py-2 hover:w-36 transition-all" >Exam Timer</a>
+        </div>
+        <h2 id="tooltip" class="text-neutral-500 italic mt-24">​</h1>
+    </div>
+</body>
+</html>
+
+<script>
+    $('#prac').hover(()=>{
+        $('#tooltip').html('Practice your writing speed with short sprints of writing text.')
+    })
+    $('#exam').hover(()=>{
+        $('#tooltip').html('Ready for a full-length Past Paper? Use the Exam Timer as a stopwatch.')
+    })
+</script>

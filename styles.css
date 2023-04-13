@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'me'; /*a name to be used later*/
+  src: url('me.ttf'); /*URL to font*/
+}
+*{
+  font-family: me;
+}
+
+.vhide{
+  visibility: hidden;
+}
+

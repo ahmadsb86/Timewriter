@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeWriter - Practice</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+</head>
+<body class="bg-neutral-900 h-screen">
+    <div class="flex flex-col md:flex-row  justify-around items-center transition-all h-screen">
+
+        <!--Main section-->
+        <div class="flex items-center justify-center bg-neutral-900 h-full w-1/2  flex-col ">
+            <h1 class="text-center text-neutral-100 text-6xl transition-all" id="timer">00:00:00</h1>
+            <h1 class="text-center text-neutral-100 italic mt-4 transition-all" id="notif">Hold Space When You're Ready</h1>
+            <div class="flex flex-col justify-start  transition-all mt-24 text-xl w-2/3 ">
+
+                <!--Calculator Card-->
+                <div id="calc-card" class="bg-neutral-800 rounded-xl p-8 w-full ">
+                    <div class="flex justify-between items-center">
+                        <h1 class="text-left text-neutral-100  " autofocus>Number of Words: </h1>
+                        <input type="number" name="" id="w" class="bg-transparent rounded-md border w-16 p-1  text-white " >
+                    </div>
+                    <div class="flex justify-between items-center mt-3">
+                        <h1 class="text-left text-neutral-100">WPM:</h1>
+                        <h1 class="text-right mr-1 text-neutral-100" id="WPM">----</h1>
+                    </div>  
+                </div>
+                
+                <!--Save Card-->
+                <div id="comments-card" class="bg-neutral-800 rounded-xl p-8 w-full  mt-14">
+                    <div class="flex justify-between items-center ">
+                        <h1 class="text-left text-neutral-100  ">Comments: </h1>
+                        <input type="text" name="" id="comment-inp" class="bg-transparent rounded-md border w-full ml-4 p-1 text-white " >
+                    </div>
+                    <div class="flex justify-around mt-8">
+                        <button id="retry" class="px-4 py-1 w-1/4 transition-all hover:w-4/12 focus:w-4/12 bg-neutral-700 rounded-md text-neutral-100">Retry</button>
+                        <button id="save" class="px-4 py-1 w-1/4 transition-all hover:w-4/12 focus:w-4/12 bg-pink-700 rounded-md text-neutral-100">Save run</button>
+                        <button id="view" class="px-4 py-1 w-1/4 transition-all hover:w-4/12 focus:w-4/12 bg-neutral-700 rounded-md text-neutral-100">View runs</button>
+                    </div>
+                </div>
+                
+                <!--Stats-->
+                <div id="stats" class="">
+                    <h1 class="text-center text-neutral-100 mt-24 text-4xl" id="best">Best: -</h1>
+                    <h1 class="text-center text-neutral-100 text-4xl" id="avg">Avg: -</h1>
+                </div>
+                
+            </div>
+        </div>
+
+        <!--Past Runs-->
+        <div class=" h-full w-0 overflow-y-auto overflow-x-hidden border-l" id="past-runs-section">
+            <h1 class="text-neutral-100 text-6xl bold mt-20 ">| Past runs</h1>
+            <div class="flex flex-col justify-start mt-36 items-center h-auto  w-4/5 " id="sidebar">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="practice.js"></script>

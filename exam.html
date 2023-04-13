@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeWriter - Practice</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+</head>
+<body class="bg-neutral-900 h-screen flex flex-col justify-center">
+
+    <!--Papa flexbox-->
+    <div class="flex flex-col justify-evenly items-center transition-all h-1/2">
+            <div id="inpCard" class=" bg-neutral-800 rounded-lg p-8 w-72">
+                <h1 class="text-center text-neutral-100 italic transition-all" >Enter Exam Length</h1>
+                <div class="flex justify-evenly items-center text-6xl mt-4 text-neutral-100">
+                    <div id='i4' class="rounded-sm border-b opacity-10">H</div>
+                    <div id='i3' class="rounded-sm border-b opacity-10">H</div>
+                    <div  class="">:</div>
+                    <div id='i2' class="rounded-sm border-b opacity-10">M</div>
+                    <div id='i1' class="rounded-sm border-b opacity-10">M</div>
+                </div>
+            </div>
+            <button id="start" class="bg-pink-700 rounded-md px-4 py-2 text-neutral-100 hover:px-8 transition-all">Start Exam</button>
+            <div id="timeCard" class=" bg-neutral-800 rounded-lg p-8">
+                <h1 class="text-center text-neutral-100 text-6xl transition-all" id="timer">00:00:00</h1>
+                <h1 class="text-center text-neutral-100 italic mt-4 transition-all" id="notif">Hit Space to Pause Timer</h1>
+            </div>
+            <button id="stop" class="bg-pink-700 rounded-md px-4 py-2 text-neutral-100 hover:px-8 transition-all">End Exam</button>
+    </div>
+</body>
+</html>
+<script src="exam.js"></script>
